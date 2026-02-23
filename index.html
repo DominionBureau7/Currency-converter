@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <!--Connecting css in the start-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container"><!--This is the outer Container-->
+        <h1>Currency Converter</h1>
+
+        <!--Where the primary currency is selected and input is given-->
+        <div class="Currency-container">
+            <select id="currency-first">
+                <option value="AUD">AUD</option>
+                <option value="CAD">CAD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="INR">INR</option>
+                <option value="JPY">JPY</option>
+                <option value="USD" selected>USD</option><!--Selected here means that USD will be shown as defualt-->
+            </select>
+            <input type="number" id="worth-first" value="1" min="0">
+        </div>
+
+        <!--Where currency will be converted to-->
+        <div class="Currency-container">
+            <select id="currency-second">
+                <option value="AUD">AUD</option>
+                <option value="CAD">CAD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="INR" selected>INR</option>
+                <option value="JPY">JPY</option>
+                <option value="USD">USD</option>
+            </select>
+            <input type="number" id="worth-second" disabled>
+        </div>
+        <p id="exchange-rate">1 USD = 90.88 INR</p>
+    </div>
+    <!--Connecting JS in the end. (If scripts are placed at the top, they block the rendering of the page, making it feel slower. Putting them at the end allows the HTML and CSS to load first, so the user sees the page quickly.)-->
+    <script src="index.js"></script>
+</body>
+</html>
